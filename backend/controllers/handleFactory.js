@@ -97,6 +97,7 @@ exports.getById = (Model, popOptions) =>
 exports.create = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = new Model(req.body);
+    console.log("created new toures ")
     await doc.save({ validateBeforeSave: false });
     res.status(201).json({ status: "SUCCESS" });
   });

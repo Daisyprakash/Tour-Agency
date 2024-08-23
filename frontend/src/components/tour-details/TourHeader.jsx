@@ -9,7 +9,7 @@ export default function TourHeader({
   return (
     <section className="section-header">
       <div className="header__hero">
-        <div className="header__hero-overlay">&nbsp;</div>
+        {/* <div className="header__hero-overlay">&nbsp;</div> */}
         <img src={imageCover} alt={name} className="header__hero-img" />
       </div>
       <div className="heading-box">

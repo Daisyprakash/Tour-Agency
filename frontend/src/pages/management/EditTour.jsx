@@ -71,8 +71,8 @@ export default function EditTour() {
 
       setStartDates(tour.startDates);
       setLocations(tour.locations);
-      setImages(tour.images);
-      setLeadGuide(tour.guides[0]._id);
+      setImages(tour?.images||[]);
+      setLeadGuide(tour?.guides[0]?._id);
 
       const guidesId = tour.guides.slice(1).map((el) => el._id);
       setTourGuides(guidesId);

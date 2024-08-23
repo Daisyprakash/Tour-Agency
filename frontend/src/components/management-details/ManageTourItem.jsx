@@ -58,8 +58,8 @@ export default function ManageTourItem({ tour }) {
         </Link>
 
         <div className="leadguide-item">
-          <img src={leadGuide.photo} alt={leadGuide.name} />
-          <h3>{leadGuide.name}</h3>
+          <img src={leadGuide?.photo || "https://images.unsplash.com/photo-1654414882149-8417f5de3a63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHRvdXIlMjBndWlkZXxlbnwwfHwwfHx8MA%3D%3D"} alt={leadGuide?.name||"Default Lead"} />
+          <h3>{leadGuide?.name || "Default Lead"}</h3>
         </div>
         <p className="table-p-item">{tour.duration} days</p>
 

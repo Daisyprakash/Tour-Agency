@@ -80,6 +80,7 @@ const tourSchema = new mongoose.Schema(
     imageCover: {
       type: String,
       required: [true, "A tour must have a cover image"],
+      default:"https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     images: [String],
     createdAt: {

@@ -34,9 +34,9 @@ const bookings = JSON.parse(
 const importData = async () => {
   try {
     await Tour.create(tours);
-    await User.create(users, { validateBeforeSave: false });
-    await Review.create(reviews);
-    await Booking.create(bookings, { validateBeforeSave: false });
+    // await User.create(users, { validateBeforeSave: false });
+    // await Review.create(reviews);
+    // await Booking.create(bookings, { validateBeforeSave: false });
     console.log("Data loaded successfully!");
   } catch (err) {
     console.error("Error:", err);
@@ -49,9 +49,9 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await Tour.deleteMany();
-    await User.deleteMany();
-    await Review.deleteMany();
-    await Booking.deleteMany();
+    // await User.deleteMany();
+    // await Review.deleteMany();
+    // await Booking.deleteMany();
     console.log("Data deleted successfully!");
   } catch (err) {
     console.error("Error:", err);

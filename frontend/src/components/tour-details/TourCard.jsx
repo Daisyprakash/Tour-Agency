@@ -13,7 +13,7 @@ export default function TourCard({ tour }) {
           </div>
         )}
         <div className="card__picture">
-          <div className="card__picture-overlay">&nbsp;</div>
+          {/* <div className="card__picture-overlay">&nbsp;</div> */}
           <img
             src={tour.imageCover}
             alt={tour.name}
