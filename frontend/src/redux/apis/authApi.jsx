@@ -1,11 +1,28 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
-
+import Cookies from 'js-cookie'; // Import js-cookie
 import customFetchBase from "../customFetchBase";
 import { bookingApi } from "./bookingApi";
 import { userApi } from "./userApi";
 import { tourApi } from "./tourApi";
 import { isLoggedOut } from "../slices/userSlice";
 
+const setCookie = (name, value, days) => {
+  const d = new Date();
+  d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = `${name}=${value};${expires};path=/`;
+};
+
+// Helper function to get cookies
+const getCookie = (name) => {
+  let value = `; ${document.cookie}`;
+  let parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+};
+
+const deleteCookie = (name) => {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+};
 export const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: customFetchBase,
@@ -20,13 +37,23 @@ export const authApi = createApi({
 
       async onQueryStarted(args, obj) {
         try {
-          await obj.queryFulfilled;
+          const result = await obj.queryFulfilled;
+          
+          // Assuming that the signup response includes an access token
+          const accessToken = result.data?.accessToken;
+          
+          if (accessToken) {
+            // Set the token in cookies
+            setCookie('accessToken', accessToken, 7); // Set cookie for 7 days
+          }
+
           obj.dispatch(userApi.util.invalidateTags(["me"]));
           obj.dispatch(bookingApi.util.resetApiState());
         } catch (error) {
           if (import.meta.env.DEV) console.error("Error:", error);
         }
       },
+
     }),
 
     //* Login ******************************************************
@@ -39,7 +66,16 @@ export const authApi = createApi({
 
       async onQueryStarted(args, obj) {
         try {
-          await obj.queryFulfilled;
+          const result = await obj.queryFulfilled;
+
+          // Assuming that the login response includes an access token
+          const accessToken = result.data?.accessToken;
+          
+          if (accessToken) {
+            // Set the token in cookies
+            setCookie('accessToken', accessToken, 7); // Set cookie for 7 days
+          }
+
           obj.dispatch(userApi.util.invalidateTags(["me"]));
           obj.dispatch(bookingApi.util.resetApiState());
           obj.dispatch(tourApi.util.invalidateTags(["tourReviews"]));
@@ -60,7 +96,9 @@ export const authApi = createApi({
       async onQueryStarted(args, obj) {
         try {
           await obj.queryFulfilled;
+          deleteCookie('accessToken');
           obj.dispatch(userApi.util.resetApiState());
+
           obj.dispatch(isLoggedOut());
           obj.dispatch(tourApi.util.invalidateTags(["tourReviews"]));
         } catch (error) {

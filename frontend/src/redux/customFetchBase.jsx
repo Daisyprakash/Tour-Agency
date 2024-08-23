@@ -1,5 +1,6 @@
 import { fetchBaseQuery } from "@reduxjs/toolkit/query";
 import { Mutex } from "async-mutex";
+import Cookies from 'js-cookie'; // Ensure you have js-cookie installed
 
 import { isLoggedOut } from "./slices/userSlice";
 
@@ -8,6 +9,17 @@ const mutex = new Mutex();
 const baseQuery = fetchBaseQuery({
   baseUrl: import.meta.env.VITE_BACKEND_URL,
   credentials: "include",
+  prepareHeaders: (headers) => {
+    // Get the token from cookies
+    const token = Cookies.get('accessToken'); // Replace 'accessToken' with your actual cookie name
+    
+    // If the token exists, add it to the headers
+    if (token) {
+      headers.set('Authorization', `Bearer ${token}`);
+    }
+    
+    return headers;
+  },
 });
 
 const customFetchBase = async (args, api, extraOptions) => {
