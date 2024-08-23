@@ -18,6 +18,7 @@ const bookingControllers = require("./controllers/bookingControllers");
 const AppError = require("./utils/appError");
 const errorHandler = require("./middlewares/errorMiddleware");
 const sanitizeHtml = require("./middlewares/sanitizeHtml");
+const loggerMiddleware = require("./utils/loggerMiddleware");
 require("./controllers/authentication/passport");
 
 //* Start express app **********************************************
@@ -42,6 +43,8 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+app.use(loggerMiddleware); // Use the logging middleware
 
 // Limit requests
 const limiter = rateLimit({
