@@ -28,16 +28,16 @@ const app = express();
 //* Middlewares ****************************************************
 
 // Implement cors
-app.use(
-  cors({
-    origin: [ process.env.FRONTEND_URL,"*"],
-    credentials: true,
-  })
-);
-app.options("*", cors());
+// app.use(
+//   cors({
+//     origin: [ process.env.FRONTEND_URL],
+//     credentials: true,
+//   })
+// );
+// app.options("*", cors());
 
-// set security HTTP headers
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+// // set security HTTP headers
+// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 // Logger for dev
 if (process.env.NODE_ENV === "development") {
