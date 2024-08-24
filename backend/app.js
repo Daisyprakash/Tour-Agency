@@ -100,6 +100,7 @@ app.use(compression());
 //* Routes *********************************************************
 
 app.get("/", (req, res) => res.send("Server working!"));
+app.get("/api/v2/health", (req, res) => res.send("healthy!!"));
 
 app.use("/api/v2/auth", authRoutes);
 app.use("/api/v2/user", userRoutes);

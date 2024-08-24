@@ -13,8 +13,8 @@ export default function TourMap({ locations }) {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/s-chanda/clikoaxwo00fq01pf9h3lgc0g",
-      scrollZoom: false,
+      style: "mapbox://styles/mapbox/light-v11",
+      scrollZoom: true,
     });
 
     const bounds = new mapboxgl.LngLatBounds();
