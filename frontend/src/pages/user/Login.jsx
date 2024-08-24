@@ -87,15 +87,12 @@ export default function Login() {
             <p className="content-between">or continue with</p>
             <div className="line-horizontal">&nbsp;</div>
           </div>
-          <div className="center">
-            <Link
+          <div className="center" >
+            <devicePixelRatio
               className="btn btn--white btn--large btn--google"
-              to={`${
-                import.meta.env.VITE_BACKEND_URL
-              }/auth/google?redirect=${redirect}`}
             >
               Google
-            </Link>
+            </devicePixelRatio>
           </div>
           <div className="form__link">
             Does not have an account?{" "}
