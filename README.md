@@ -25,6 +25,19 @@ Visit the link -> https://natours-mern-v2.netlify.app/
    - Feedback (like/unlike) for each review
 5. Manage users, tours, reviews, and bookings
 6. Sort, filter, pagination, and search box functionality
+
+## Platforms used
+1. Frontend- [Vite](https://vitejs.dev/guide/)/[React](https://react.dev/), Backend- [Node](https://nodejs.org/en)/[Express](https://expressjs.com/), Database- [MongoDB](https://www.mongodb.com/)/[Mongoose](https://mongoosejs.com/)
+2. Store- [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview)
+3. Payment- [Stripe](https://stripe.com/en-in)
+4. Mail- [MailTrap](https://mailtrap.io/) (Development) & [Brevo](https://app.brevo.com/) (Production) [Free version]
+5. SMS- [Twilio](https://www.twilio.com/en-us) [Free version]
+6. Image Upload- [Cloudinary](https://cloudinary.com/)
+7. Google Login- [Passport](https://www.passportjs.org/)
+8. Map- [Mapbox](https://www.mapbox.com/)
+9. Frontend deployed in [Netlify](https://www.netlify.com/) and Backend deployed in [Vercel](https://vercel.com/)
+
+
 ## Videos
 ### Overview page
 https://github.com/RoniChanda/Natours-V2/assets/86836682/75f963cc-54d4-4430-9682-5155f075eca5
@@ -44,16 +57,6 @@ https://github.com/RoniChanda/Natours-V2/assets/86836682/d1eb383f-e832-45a7-ad34
 https://github.com/RoniChanda/Natours-V2/assets/86836682/d6deca19-ed2c-43b4-b2a9-bdfb8775f91b
 ### Two-Factor Login pages
 https://github.com/RoniChanda/Natours-V2/assets/86836682/cc5c974e-937f-42b7-bef6-d3e8612c26f4
-## Platforms used
-1. Frontend- [Vite](https://vitejs.dev/guide/)/[React](https://react.dev/), Backend- [Node](https://nodejs.org/en)/[Express](https://expressjs.com/), Database- [MongoDB](https://www.mongodb.com/)/[Mongoose](https://mongoosejs.com/)
-2. Store- [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview)
-3. Payment- [Stripe](https://stripe.com/en-in)
-4. Mail- [MailTrap](https://mailtrap.io/) (Development) & [Brevo](https://app.brevo.com/) (Production) [Free version]
-5. SMS- [Twilio](https://www.twilio.com/en-us) [Free version]
-6. Image Upload- [Cloudinary](https://cloudinary.com/)
-7. Google Login- [Passport](https://www.passportjs.org/)
-8. Map- [Mapbox](https://www.mapbox.com/)
-9. Frontend deployed in [Netlify](https://www.netlify.com/) and Backend deployed in [Vercel](https://vercel.com/)
 
 
 
