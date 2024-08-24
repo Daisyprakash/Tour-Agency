@@ -152,8 +152,8 @@ https://github.com/RoniChanda/Natours-V2/assets/86836682/cc5c974e-937f-42b7-bef6
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.9"
   }
-} -->
-```
+}
+``` -->
 ## Issues in this website
 1. Twilio is in the free version. So sending sms to an unverified number is not possible.
 2. Vercel has a payload limit of 4.5MB; hence, an error will occur if the total size of the submitted file exceeds 4.5 MB. Better use images of fewer sizes.
