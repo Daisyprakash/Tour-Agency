@@ -26,8 +26,7 @@ export default function Footer() {
         </li>
       </ul>
       <p className="footer__copyright">
-        &copy; {new Date().getFullYear()} modified by Supratim Chanda, created
-        by Jonas Schmedtmann.
+       
       </p>
     </footer>
   );

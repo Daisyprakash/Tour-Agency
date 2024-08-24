@@ -1,4 +1,3 @@
-![logo-green](https://github.com/RoniChanda/Natours-V2/assets/86836682/e2b659e2-ce51-4ab1-a4ca-edf9da3cca20)
 ## Natours-Mern-V2
 This is the modified version of *Jonas Schmedtmann's* Natours using **MERN** stack (React frontend and Node backend).
 ## Live Website
@@ -160,7 +159,7 @@ https://github.com/RoniChanda/Natours-V2/assets/86836682/cc5c974e-937f-42b7-bef6
 1. Twilio is in the free version. So sending sms to an unverified number is not possible.
 2. Vercel has a payload limit of 4.5MB; hence, an error will occur if the total size of the submitted file exceeds 4.5 MB. Better use images of fewer sizes.
    
-If you find any other notable issues please get in touch with me at suprachanda97@gmail.com
+If you find any other notable issues please get in touch with me at daisyprakashkhoja@gmail.com
 ## Future Ideas
 1. To make this website mobile responsive
 2. To add a carousel of top tours on the overview page
