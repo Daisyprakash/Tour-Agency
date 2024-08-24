@@ -1,5 +1,4 @@
-## Natours-Mern-V2
-This is the modified version of *Jonas Schmedtmann's* Natours using **MERN** stack (React frontend and Node backend).
+## logo-green
 ## Live Website
 Visit the link -> https://natours-mern-v2.netlify.app/
 ## Some notable features of the Original Version
@@ -55,7 +54,7 @@ https://github.com/RoniChanda/Natours-V2/assets/86836682/cc5c974e-937f-42b7-bef6
 7. Google Login- [Passport](https://www.passportjs.org/)
 8. Map- [Mapbox](https://www.mapbox.com/)
 9. Frontend deployed in [Netlify](https://www.netlify.com/) and Backend deployed in [Vercel](https://vercel.com/)
-## Packages used
+<!-- ## Packages used
 ### Backend
 ```
 {
@@ -153,7 +152,7 @@ https://github.com/RoniChanda/Natours-V2/assets/86836682/cc5c974e-937f-42b7-bef6
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.9"
   }
-}
+} -->
 ```
 ## Issues in this website
 1. Twilio is in the free version. So sending sms to an unverified number is not possible.
