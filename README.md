@@ -1,4 +1,4 @@
-## logo-green
+## ExploreEssence
 ## Live Website
 Visit the link -> https://natours-mern-v2.netlify.app/
 ## Some notable features of the Original Version
