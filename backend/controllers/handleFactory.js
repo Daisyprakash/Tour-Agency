@@ -83,7 +83,8 @@ exports.getById = (Model, popOptions) =>
         new AppError(`No ${modelName(Model)} found with the provided ID`, 404)
       );
     }
-
+    console.log("the tour is ");
+    console.log(doc);
     res.status(200).json({
       status: "SUCCESS",
       data: {
