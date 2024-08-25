@@ -30,7 +30,7 @@ const app = express();
 // Implement cors
 app.use(
   cors({
-    origin: ["http://localhost:5173", process.env.FRONTEND_URL],
+    origin: ["http://localhost:5173", "https://tour-agency-kboj.onrender.com"],
     methods: ['GET', 'POST', 'PUT', 'DELETE',"PATCH","OPTIONS"],
     credentials: true,
   })
