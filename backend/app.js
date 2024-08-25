@@ -43,6 +43,7 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use((req, res, next) => {
   console.log('CORS Middleware Triggered');
   console.log('Origin:', req.headers.origin);
+  console.log(process.env.FRONTEND_URL)
   next();
 });
 
