@@ -83,8 +83,6 @@ exports.getById = (Model, popOptions) =>
         new AppError(`No ${modelName(Model)} found with the provided ID`, 404)
       );
     }
-    console.log("the tour is ");
-    console.log(doc);
     res.status(200).json({
       status: "SUCCESS",
       data: {
@@ -98,7 +96,6 @@ exports.getById = (Model, popOptions) =>
 exports.create = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = new Model(req.body);
-    console.log("created new toures ")
     await doc.save({ validateBeforeSave: false });
     res.status(201).json({ status: "SUCCESS" });
   });
