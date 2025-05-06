@@ -1,6 +1,6 @@
 ## ExploreEssence
 ## Live Website
-Visit the link ->[ https://natours-mern-v2.netlify.app/](https://tour-agency-kboj.onrender.com/)
+Visit the link - https://tour-agency-kboj.onrender.com/
 ## Some notable features of the Original Version
 1. Authentication using email & password, jwt cookie
 2. Marking the locations of tours on the map
